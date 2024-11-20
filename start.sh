@@ -1,8 +1,10 @@
-mkdir -p bin/log
+mkdir -p /workspaces/log
 
-http-server ./bin/dist -p 30080 > bin/log/output.log 2>&1 &
+cd /workspaces/bin/koa-service || exit
 
-cd bin || exit
+node app.js > /workspaces/log/server.log 2>&1 &
+
+cd /workspaces/bin || exit
 
 ./server
 
