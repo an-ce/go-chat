@@ -18,6 +18,12 @@ app.use(koaServerHttpProxy('/api/', {
     pathRewrite: {'^/api': ''},
 }))
 
+app.use(koaServerHttpProxy('/ws/', {
+    target: 'http://127.0.0.1:3000',
+    ws: true,
+    changeOrigin: true,
+}))
+
 app.use(historyApiFallback())
 app.use(koaStatic(path.join(__dirname, './dist')))
 
