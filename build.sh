@@ -11,7 +11,7 @@ yarn
 
 npm run build
 
-npm i -g http-server
+#npm i -g http-server
 
 cd ..
 
@@ -27,3 +27,7 @@ cd ..
 
 mv server/server bin/
 cp -r server/config/app.yaml bin/config/app.yaml
+
+version=$(date "+%Y%m%d%H%M%S")
+
+docker build -t go-chat:${version} .

@@ -4,15 +4,15 @@ server:
 mysql:
   username: root
   password: gochat123
-  host: 127.0.0.1
-  port: 33306
+  host: 172.17.0.2
+  port: 3306
   dbname: go-chat
   charset: utf8mb4
   parseTime: True
-  loc: Local 
+  loc: Local
 redis:
-  host: 127.0.0.1
-  port: 36379
+  host: 172.17.0.3
+  port: 6379
   db: 0
   password:
 jwt:
